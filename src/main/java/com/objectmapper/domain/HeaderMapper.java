@@ -1,5 +1,6 @@
 package com.objectmapper.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,8 +10,11 @@ public class HeaderMapper {
     public String accept;
     String connection;
     String host;
-    String useragent;
-    String testheader;
-    String acceptencoding;
+    @JsonProperty("user-agent")
+    String userAgent;
+    @JsonProperty("testheader")
+    String testHeader;
+    @JsonProperty("accept-encoding")
+    String acceptEncoding;
 
 }

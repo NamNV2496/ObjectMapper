@@ -19,8 +19,7 @@ public class ExampleController {
 
     @GetMapping("/hello")
     public HeaderMapper hello() throws JsonProcessingException {
-        HeaderMapper header = headerService.getHeader();
-        return header;
+        return headerService.getHeader();
     }
     @GetMapping("/getToken")
     public TokenMapper getToken() throws JsonProcessingException {

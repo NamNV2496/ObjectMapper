@@ -12,6 +12,6 @@ public class TokenMapper {
     String name;
     String admin;
     String iat;
-//    String data;
+
     List<Roles> data;
 }

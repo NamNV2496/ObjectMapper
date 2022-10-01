@@ -26,8 +26,9 @@ public class HeaderService {
         while (headerNames.hasMoreElements()) {
             String key = (String) headerNames.nextElement();
             String value = request.getHeader(key);
-            String keyUpdate = key.replace("-", "");
-            map.put(keyUpdate, value);
+//            String keyUpdate = key.replace("-", "");
+//            map.put(keyUpdate, value);
+            map.put(key, value);
         }
         String json = objectMapperDisableUnknownProperties.writeValueAsString(map);
         return objectMapperDisableUnknownProperties.readValue(json, HeaderMapper.class);
